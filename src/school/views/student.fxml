@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1250.0" stylesheets="@../assets/resources/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.controllers.StudentController">
+   <children>
+      <HBox layoutY="69.0" prefHeight="266.0" prefWidth="1250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.0">
+         <children>
+            <VBox prefHeight="270.0" prefWidth="523.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Name">
+                           <font>
+                              <Font name="Cambria" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="s_name" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Age">
+                           <font>
+                              <Font name="Cambria" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="s_age" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Phone">
+                           <font>
+                              <Font name="Cambria" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="s_phone" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="270.0" prefWidth="523.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Gender">
+                           <font>
+                              <Font name="Cambria" size="24.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="s_gender" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Class">
+                           <font>
+                              <Font name="Cambria" size="24.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="s_class" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Section">
+                           <font>
+                              <Font name="Cambria" size="24.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="s_section" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="270.0" prefWidth="524.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" fillHeight="false" prefHeight="150.0" prefWidth="524.0" spacing="15.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="90.0" text="Address">
+                           <font>
+                              <Font name="Cambria" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="s_address" prefHeight="120.0" prefWidth="200.0" />
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="524.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="editBtn" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#editStudent" text="Edit" visible="false" />
+                        <Button id="loginBtn" fx:id="addBtn" defaultButton="true" mnemonicParsing="false" onAction="#addStudent" text="Add" />
+                        <Button id="cancelBtn" mnemonicParsing="false" onAction="#cancelStudent" prefHeight="0.0" prefWidth="52.0" text="Cancel" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Separator layoutY="336.0" prefWidth="1570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="336.0" />
+      <HBox layoutY="338.0" prefHeight="60.0" prefWidth="1250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="785.0" spacing="50.0">
+               <children>
+                  <Label fx:id="s_count" styleClass="count" text="Count">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="785.0" spacing="50.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="190.0" text="Search by Name">
+                     <font>
+                        <Font name="Cambria" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="s_search_box" promptText="search..." />
+                  <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#search" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <Separator layoutY="398.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <TableView fx:id="stu_table" layoutY="415.0" prefWidth="1570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="col_stu_id" prefWidth="36.00000077486038" resizable="false" text="ID" />
+            <TableColumn fx:id="col_stu_name" prefWidth="137.60000228881836" resizable="false" text="Name" />
+            <TableColumn fx:id="col_stu_age" prefWidth="38.4000244140625" resizable="false" text="Age" />
+            <TableColumn fx:id="col_stu_phone" prefWidth="134.39999389648438" resizable="false" text="Phone" />
+            <TableColumn fx:id="col_stu_gender" prefWidth="69.5999755859375" resizable="false" text="Gender" />
+            <TableColumn fx:id="col_stu_class" prefWidth="146.39999389648438" resizable="false" text="Class" />
+            <TableColumn fx:id="col_stu_section" prefWidth="54.4000244140625" resizable="false" text="Section" />
+            <TableColumn fx:id="col_stu_address" prefWidth="336.0" resizable="false" text="Address" />
+            <TableColumn fx:id="col_stu_entered_date" prefWidth="165.5999755859375" resizable="false" text="Entered Date" />
+            <TableColumn fx:id="actionColumn" prefWidth="130.40008544921875" resizable="false" text="Action" />
+         </columns>
+      </TableView>
+      <Pane prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: blue;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="23.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management ">
+               <font>
+                  <Font name="Cambria Bold" size="28.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+#loginBtn {
+-fx-background-color:blue;
+-fx-text-fill:white;
+-fx-cursor: hand;
+-fx-font-family: Cambria;
+}
+
+#cancelBtn{
+-fx-background-color:red;
+-fx-text-fill:white;
+-fx-cursor: hand;
+-fx-font-family: Cambria;
+-fx-font-size: 12;
+}
+
+#editBtn{
+-fx-background-color:yellow;
+-fx-text-fill:black;
+-fx-cursor: hand;
+-fx-font-family: Cambria;
+-fx-font-size: 12;
+}
+
+
+
+#okBtn{
+-fx-background-color: green;
+-fx-text-fill:white;
+-fx-font-family: Cambria;
+-fx-font-size: 12;
+}
+
+
+
+.sidebar-btn{
+    -fx-font-family: Cambria;
+    -fx-font-size: 20;
+    -fx-background-color: #fff;
+}
+.sidebar-btn:hover{
+    -fx-background-color:blue;
+    -fx-text-fill: #fff;
+}
+.count{
+    -fx-border-color: blue;
+    -fx-border-radius: 300;
+    -fx-text-fill:blue;
+    -fx-padding: 10;
+    -fx-border-radius: 10;
+}
